@@ -5,7 +5,7 @@ import asyncio
 async def atualizar_files():
     csv_file = requests.get('https://raw.githubusercontent.com/henriquepgomide/caRtola/master/data/2020/2020-medias-jogadores.csv').text
     try:
-        f = open("../medias.csv", "w")
+        f = open("../data/medias.csv", "w")
         f.write(csv_file)
         f.close()
     except:
